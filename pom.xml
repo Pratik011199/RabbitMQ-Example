@@ -12,7 +12,7 @@
 	<artifactId>RabbitMQ-Example</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>RabbitMQ-Example</name>
-	<description>Demo project for Spring Boot Meesaging using RabbitMQ</description>
+	<description>Demo project for Spring Boot Messaging using RabbitMQ</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -38,7 +38,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>

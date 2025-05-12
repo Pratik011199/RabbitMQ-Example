@@ -5,7 +5,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pratik.config.MessagingConfig;
 import com.pratik.dto.PaymentRequestDTO;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.stereotype.Component;
 
+@Component
 public class PaytmClientApp3 {
 
     @RabbitListener(queues = MessagingConfig.QUEUE)
