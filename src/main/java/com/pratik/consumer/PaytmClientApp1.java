@@ -1,0 +1,19 @@
+package com.pratik.consumer;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.pratik.config.MessagingConfig;
+import com.pratik.dto.PaymentRequestDTO;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
+
+public class PaytmClientApp1 {
+
+    @RabbitListener(queues = MessagingConfig.QUEUE)
+    public void processPaymentRequest(PaymentRequestDTO paymentRequestDTO) {
+        try {
+            System.out.println("consumer (1) consumes" + new ObjectMapper().writeValueAsString(paymentRequestDTO));
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+}
